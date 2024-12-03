@@ -1,17 +1,18 @@
 {
   "dependencies": {
     "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.6",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "express-validator": "^7.2.0",
     "mongoose": "^8.8.3"
   },
   "name": "drive",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "npx nodemon"
+    "dev": "npx nodemon"
   },
   "keywords": [],
   "author": "",

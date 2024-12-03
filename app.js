@@ -1,7 +1,10 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const userRouter = require('./routes/user.routes')
+const userRouter = require('./routes/user.routes');
+require('dotenv').config()
+const connectDB = require('./config/db');
+connectDB()
 
 //Engine
 app.set("view engine", "ejs")
@@ -17,4 +20,8 @@ app.get('/',(req,res) => {
 //routes
 app.use('/user', userRouter)
 
-app.listen(3000)
+// port
+const PORT = process.env.PORT 
+app.listen(PORT,()=>{
+    console.log("server is runnug on port 3000")
+})
